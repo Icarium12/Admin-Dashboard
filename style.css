@@ -9,19 +9,23 @@ body {
 }
 
 .container {
-    border: 1px solid black;
     display: grid;
     grid-template-columns: 1fr 4fr;
-    width: 70%;
-    min-height: 100vh;
+    width: 50%;
+    height: minmax(50vh, 80vh);
+    
 }
 
 .sidebar {
-    border: 1px solid black;
     grid-column: span 1;
     grid-row: span 2; 
     background-color: #0077ff;
     align-items: stretch;
+}
+
+.heading {
+    padding-left: 2rem;
+    margin-bottom: 1rem;
 }
 
 .topside {
@@ -32,34 +36,84 @@ body {
 }
 
 .topside > *, .bottom-side > * {
-    border: 1px solid black;
     padding-left: 2rem;
 }
 
 .bottom-side {
-    margin-top: 2rem;
+    margin-top: 4rem;
     display: grid;
     grid-template-rows: repeat((3, 1fr));
     gap: 20px;
 }
 
 .header {
-    border: 1px solid black;
     grid-column: span 2;
     margin-bottom: 1rem; 
+    height: 9rem;
 }
 
 .top-header {
+    margin-top: 1rem;
     display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.first-section {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 10px;
+    margin-left: 2rem;
+}
+
+.second-section {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 10px;
+    margin-right: 2rem;
 }
 
 .bottom-header {
     display: flex;
+    margin-bottom: -10rem;
+    justify-content: space-between;
+}
+
+.left {
+    margin-left: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.left > :first-child {
+    grid-row: span 2;
+}
+
+.left > :nth-child(3) {
+    grid-column-start: 2;
+    color: blue;
+}
+
+.right {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 15px;
+    margin-right: 2rem;
+}
+
+.projects {
+    border: 1px solid blue;
+    margin-bottom: 3rem;
+}
+
+.projects > :first-child {
+    margin-left: 1rem;
+    margin-bottom: 1rem;
 }
 
 .projects-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(25em, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
     gap: 1rem;
     margin-left: 1rem;
     margin-right: 1rem;
@@ -80,6 +134,10 @@ body {
     margin-right: 2rem;
 }
 
+.announcements > :first-child {
+    margin-bottom: 1rem;
+}
+
 .ann-container {
     display: flex;
     flex-direction: column;
@@ -97,4 +155,20 @@ body {
 .trending-items {
     border: 1px solid black;
     margin-top: 20px;
+    display: grid;
+    grid-template-rows: 4fr;
+}
+
+input {
+    width: 30rem;
+    height: 2rem;
+    background-color: rgb(199, 195, 195);
+    border-radius: 10px;
+}
+
+button {
+    background-color: #0077ff;
+    color: white;
+    width: 100px;
+    border-radius: 15px;
 }
