@@ -22,9 +22,10 @@ body {
 
 .container {
     display: grid;
-    grid-template-columns: 1fr 4fr;
-    width: 50%;
+    grid-template-columns: 1fr 3fr;
+    width: fit-content;
     height: minmax(50vh, 80vh);
+    background-color: beige;
     
 }
 
@@ -45,9 +46,10 @@ body {
     grid-template-rows: 1fr;
     grid-template-columns: 60px 60px;
     margin-top: 1rem;
-    font-size: larger;
+    font-size: x-large;
     font-weight: 800;
     gap: 5px;
+    margin-left: 1rem;
 }
 
 .topside {
@@ -82,7 +84,9 @@ body {
 .header {
     grid-column: span 2;
     margin-bottom: 1rem; 
-    height: 9rem;
+    height: 10rem;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3);
+    background-color: whitesmoke;
 }
 
 .top-header {
@@ -116,6 +120,7 @@ body {
     margin-left: 2rem;
     display: grid;
     grid-template-columns: 80px 1fr;
+    margin-bottom: 2em;
 }
 
 .left > :first-child {
@@ -135,8 +140,8 @@ body {
 }
 
 .projects {
-    border: 1px solid blue;
     margin-bottom: 3rem;
+    width: fit-content;
 }
 
 .projects > :first-child {
@@ -157,14 +162,18 @@ body {
 .projects-container > * {
     border: 1px solid yellow;
     height: 250px;
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .announcements {
-    border: 1px solid black;
     width: 300px;
     grid-row-start: 2;
     grid-column-start: 3;
     margin-right: 2rem;
+    margin-left: -5rem;
 }
 
 .announcements > :first-child {
@@ -175,11 +184,13 @@ body {
 .ann-container {
     display: flex;
     flex-direction: column;
+    margin-left: -2rem;
+    background-color: whitesmoke;
     
 }
 
 .ann-container > * {
-    border: 1px solid blue;
+    padding: 20px;
 }
 
 .trending {
@@ -208,6 +219,8 @@ button {
     height: 40px;
     border-radius: 15px;
     border: none;
+    font-size: large;
+    font-weight: bold;
 }
 
 img[alt="search-icon"] {
@@ -241,4 +254,13 @@ img[alt="dash"] {
     height: 50px;
     width: 50px;
     filter: invert(1);
+}
+
+hr {
+    margin-top: 1em;
+}
+
+img[alt="project-icon"] {
+    height: 30px;
+    width: 30px;
 }
