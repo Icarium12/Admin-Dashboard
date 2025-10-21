@@ -1,11 +1,23 @@
+@font-face {
+    font-family: 'Inter';
+    src: url('font/Inter-Regular.woff2') format('woff2'),
+        url('font/Inter-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
 * {
     margin: 0;
     padding: 0;
 }
 
+
 body {
     display: flex;
     justify-content: center;
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
 }
 
 .container {
@@ -17,33 +29,54 @@ body {
 }
 
 .sidebar {
+    color: white;
     grid-column: span 1;
     grid-row: span 2; 
     background-color: #0077ff;
     align-items: stretch;
+    width: 20rem;
 }
 
 .heading {
-    padding-left: 2rem;
+    align-items: center;
+    padding-left: 1rem;
     margin-bottom: 1rem;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 60px 60px;
+    margin-top: 1rem;
+    font-size: larger;
+    font-weight: 800;
+    gap: 5px;
 }
 
 .topside {
     margin-top: 2rem;
     display: grid;
     grid-template-rows: repeat(6, 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(2, 40px);
+    align-items: center;
+    gap: 10px;
+    font-size: large;
+    margin-left: 1rem;
+    font-weight: 800;
 }
 
+
 .topside > *, .bottom-side > * {
-    padding-left: 2rem;
+    padding-left: 1rem;
 }
 
 .bottom-side {
     margin-top: 4rem;
     display: grid;
-    grid-template-rows: repeat((3, 1fr));
-    gap: 20px;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 40px);
+    gap: 10px;
+    align-items: center;
+    font-size: large;
+    margin-left: 1rem;
+    font-weight: 800;
 }
 
 .header {
@@ -69,7 +102,7 @@ body {
 .second-section {
     display: flex;
     justify-content: space-evenly;
-    gap: 10px;
+    gap: 15px;
     margin-right: 2rem;
 }
 
@@ -82,7 +115,7 @@ body {
 .left {
     margin-left: 2rem;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 80px 1fr;
 }
 
 .left > :first-child {
@@ -107,6 +140,7 @@ body {
 }
 
 .projects > :first-child {
+    margin-top: 2rem;
     margin-left: 1rem;
     margin-bottom: 1rem;
 }
@@ -117,14 +151,13 @@ body {
     gap: 1rem;
     margin-left: 1rem;
     margin-right: 1rem;
+    width: 50rem;
 }
 
 .projects-container > * {
     border: 1px solid yellow;
     height: 250px;
 }
-
-
 
 .announcements {
     border: 1px solid black;
@@ -135,6 +168,7 @@ body {
 }
 
 .announcements > :first-child {
+    margin-top: 2rem;
     margin-bottom: 1rem;
 }
 
@@ -160,15 +194,51 @@ body {
 }
 
 input {
-    width: 30rem;
+    width: 35rem;
     height: 2rem;
     background-color: rgb(199, 195, 195);
     border-radius: 10px;
+    border: none;
 }
 
 button {
     background-color: #0077ff;
     color: white;
     width: 100px;
+    height: 40px;
     border-radius: 15px;
+    border: none;
+}
+
+img[alt="search-icon"] {
+    height: 30px;
+    width: 30px;
+}
+
+img[alt="notification-icon"] {
+    height: 30px;
+    width: 30px;
+}
+
+img[alt="profile-icon"] {
+    height: 40px;
+    width: 50px;
+}
+
+img[alt="profile-icon2"] {
+    height: 60px;
+    width: 60px;
+}
+
+img[alt="side-icon"] {
+    size: 30px;
+    height: 30px;
+    width: 30px;
+    filter: invert(1);
+}
+
+img[alt="dash"] {
+    height: 50px;
+    width: 50px;
+    filter: invert(1);
 }
