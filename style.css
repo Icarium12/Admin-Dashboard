@@ -206,14 +206,36 @@ body {
 }
 
 .trending {
-    margin-top: 40px;
+    margin-top: 2rem;
+    width: 25rem;
+}
+
+.trending > :first-child {
+    margin-left: 1rem;
+    font-size: larger;
+    font-weight: 800;
 }
 
 .trending-items {
-    border: 1px solid black;
+    padding: 25px;
     margin-top: 20px;
     display: grid;
     grid-template-rows: 4fr;
+    gap: 20px;
+    background-color: whitesmoke;
+    margin: 1rem;
+    border-radius: 20px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3);
+}
+
+.trending-items > * {
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    gap: 5px;
+}
+
+.trending-items > * > :first-child {
+    grid-row: span 2;
 }
 
 input {
